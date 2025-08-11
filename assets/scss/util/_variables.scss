@@ -16,9 +16,12 @@ $base-line: calc($body-fz * 1.4);
 
 // 적용 웹 폰트
 $font-ko: 'Pretendard';
+$font-ko2: 'GmarketSans';
 
 $font-family-ko: $font-ko, sans-serif;
+$font-family-ko2: $font-ko2, sans-serif;
 $pretendard: $font-ko, sans-serif;
+$gmarket: $font-ko2, sans-serif;
 
 //경로 url
 // $base-url: '/assets/';
