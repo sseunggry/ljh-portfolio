@@ -1,0 +1,78 @@
+@charset "UTF-8";
+@import "./util";
+@import "./base/";
+@import "./layout";
+
+$img-url: "../img/content";
+$ico-url: "../img/icon";
+
+.wrap{word-break: keep-all;}
+
+.sec-tit{margin-bottom: 50px;text-align: center;}
+.sec-tit .sub-tit{margin-bottom: 4px; font-size: 24px; font-weight: 700;}
+.sec-tit .tit{font-size: 42px; font-weight: 700;}
+.sec-tit .tit ~ .desc{margin-top: 16px;}
+
+//ico
+[class*="ico-"]::before{content: ''; display: block; background-repeat: no-repeat; background-size: 100% auto; background-position: center;}
+.ico{
+    @for $i from 1 through 4 {
+        $idx : if($i < 10, '0#{$i}', '#{$i}');
+        $name: 'value';
+
+        &-#{$name}#{$idx}::before{
+            margin: 0 auto 20px;
+            width: 112px;
+            height: 112px;
+            background-image: url('#{$ico-url}/ico-#{$name}#{$idx}.png');
+        }
+    }
+
+    @for $i from 1 through 4 {
+        $idx : if($i < 10, '0#{$i}', '#{$i}');
+        $name: 'process';
+
+        &-#{$name}#{$idx}::before{
+            width: 36px;
+            height: 36px;
+            background-image: url('#{$ico-url}/ico-#{$name}#{$idx}.png');
+        }
+    }
+
+    @for $i from 1 through 4 {
+        $idx : if($i < 10, '0#{$i}', '#{$i}');
+        $name: 'feature';
+
+        &-#{$name}#{$idx}::before{
+            margin-bottom: 24px;
+            width: 50px;
+            height: 50px;
+            background-image: url('#{$ico-url}/ico-#{$name}#{$idx}.png');
+        }
+    }
+}
+
+// section
+.sec-kv{}
+
+.sec-01{}
+
+@media (max-width: 1400px) {
+
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 1000px) {
+
+}
+
+@media (max-width: 750px) {
+
+}
+
+@media (max-width: 375px) {
+
+}
