@@ -2001,6 +2001,25 @@ section {
   font-weight: 500;
 }
 
+.sec-about .link-list .link-txt li a {
+  position: relative;
+}
+
+.sec-about .link-list .link-txt li a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 2px;
+  width: 0;
+  height: 1px;
+  background-color: #000;
+  transition: width 0.3s;
+}
+
+.sec-about .link-list .link-txt li a:hover::before {
+  width: 100%;
+}
+
 .sec-about .link-list .link-icon {
   display: flex;
   align-items: center;
@@ -2012,8 +2031,13 @@ section {
   height: 72px;
 }
 
-.sec-about .link-list .link-icon li::hover {
-  transform: translate(0, -5%);
+.sec-about .link-list .link-icon li a::before {
+  transform: translate(0, 0);
+  transition: transform 0.3s;
+}
+
+.sec-about .link-list .link-icon li a:hover::before {
+  transform: translate(0, -10%);
 }
 
 .sec-about .link-list .link-icon li:last-child {

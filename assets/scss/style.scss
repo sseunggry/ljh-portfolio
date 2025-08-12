@@ -47,9 +47,13 @@ $ico-url: "../img/icon";
 .sec-about .link-list::before{content: ''; position: absolute; top: 0; right: 0; transform: translate(0, -100%); display: block; width: 46px; height: 46px; background-color: #fff;}
 .sec-about .link-list::after{content: ''; position: absolute; top: 0; right: 0; transform: translate(0, -100%); display: block; width: 46px; height: 46px; border-radius: 0 0 46px 0; background: rgba(243, 241, 253, 1);}
 .sec-about .link-list .link-txt{display: flex; align-items: center; gap: 14px; font-size: 24px; font-weight: 500;}
+.sec-about .link-list .link-txt li a{position: relative;}
+.sec-about .link-list .link-txt li a::before{content: ''; display: block; position: absolute; bottom: 2px; width: 0; height: 1px; background-color: #000; transition: width 0.3s;}
+.sec-about .link-list .link-txt li a:hover::before{width: 100%;}
 .sec-about .link-list .link-icon{display: flex; align-items: center;}
 .sec-about .link-list .link-icon li{margin-right: -14px; width: 72px; height: 72px;}
-.sec-about .link-list .link-icon li::hover{transform: translate(0, -5%);}
+.sec-about .link-list .link-icon li a::before{transform: translate(0, 0); transition: transform 0.3s;}
+.sec-about .link-list .link-icon li a:hover::before{transform: translate(0, -10%);}
 .sec-about .link-list .link-icon li:last-child{margin-right: 0;}
 
 .sec-project{}
