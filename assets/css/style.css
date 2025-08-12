@@ -1785,10 +1785,6 @@ body {
   max-width: 1500px;
 }
 
-section {
-  margin-bottom: 100px;
-}
-
 @media (max-width: 375px) {
   body {
     font-size: 3.73vw;
@@ -1968,29 +1964,42 @@ section {
   background-color: #fff;
 }
 
-.sec-about .link-list::before {
-  content: "";
+.sec-about .link-list .round-shape .round {
   position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(0, -100%);
   display: block;
   width: 46px;
   height: 46px;
   background-color: #fff;
 }
 
-.sec-about .link-list::after {
-  content: "";
-  position: absolute;
+.sec-about .link-list .round-shape .round i {
+  border-radius: 0 0 46px 0;
+}
+
+.sec-about .link-list .round-shape .round:first-child {
   top: 0;
   right: 0;
   transform: translate(0, -100%);
+}
+
+.sec-about .link-list .round-shape .round:first-child i {
   display: block;
   width: 46px;
   height: 46px;
-  border-radius: 0 0 46px 0;
-  background: rgb(243, 241, 253);
+  background: #EBF2FB;
+}
+
+.sec-about .link-list .round-shape .round:last-child {
+  bottom: 0;
+  left: 0;
+  transform: translate(-100%, 0);
+}
+
+.sec-about .link-list .round-shape .round:last-child i {
+  display: block;
+  width: 46px;
+  height: 46px;
+  background: #EBF2FB;
 }
 
 .sec-about .link-list .link-txt {
@@ -2009,9 +2018,9 @@ section {
   content: "";
   display: block;
   position: absolute;
-  bottom: 2px;
+  bottom: -2px;
   width: 0;
-  height: 1px;
+  height: 2px;
   background-color: #000;
   transition: width 0.3s;
 }
@@ -2042,6 +2051,10 @@ section {
 
 .sec-about .link-list .link-icon li:last-child {
   margin-right: 0;
+}
+
+.sec-project {
+  padding: 100px 0;
 }
 
 .sec-project .thumb-list {
@@ -2090,6 +2103,10 @@ section {
 .sec-project .thumb-list .item .txt-wrap .desc {
   font-size: 16px;
   color: #808080;
+}
+
+.sec-contact {
+  padding-bottom: 100px;
 }
 
 .sec-contact .box-wrap {

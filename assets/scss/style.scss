@@ -44,11 +44,15 @@ $ico-url: "../img/icon";
 .sec-about .tit-wrap .desc{margin-top: 16px; font-size: 22px; color: #666;} 
 
 .sec-about .link-list{position: absolute; bottom: 0; right: 0; display: flex; align-items: center; gap: 30px; padding: 34px 30px; font-family: $gmarket; border-radius: 46px 0 46px 0; background-color: #fff;}
-.sec-about .link-list::before{content: ''; position: absolute; top: 0; right: 0; transform: translate(0, -100%); display: block; width: 46px; height: 46px; background-color: #fff;}
-.sec-about .link-list::after{content: ''; position: absolute; top: 0; right: 0; transform: translate(0, -100%); display: block; width: 46px; height: 46px; border-radius: 0 0 46px 0; background: rgba(243, 241, 253, 1);}
+.sec-about .link-list .round-shape .round{position: absolute; display: block; width: 46px; height: 46px; background-color: #fff;}
+.sec-about .link-list .round-shape .round i{border-radius: 0 0 46px 0;}
+.sec-about .link-list .round-shape .round:first-child{top: 0; right: 0; transform: translate(0, -100%); }
+.sec-about .link-list .round-shape .round:first-child i{display: block; width: 46px; height: 46px; background: #EBF2FB;}
+.sec-about .link-list .round-shape .round:last-child{bottom: 0; left: 0; transform: translate(-100%, 0); }
+.sec-about .link-list .round-shape .round:last-child i{display: block; width: 46px; height: 46px; background: #EBF2FB;}
 .sec-about .link-list .link-txt{display: flex; align-items: center; gap: 14px; font-size: 24px; font-weight: 500;}
 .sec-about .link-list .link-txt li a{position: relative;}
-.sec-about .link-list .link-txt li a::before{content: ''; display: block; position: absolute; bottom: 2px; width: 0; height: 1px; background-color: #000; transition: width 0.3s;}
+.sec-about .link-list .link-txt li a::before{content: ''; display: block; position: absolute; bottom: -2px; width: 0; height: 2px; background-color: #000; transition: width 0.3s;}
 .sec-about .link-list .link-txt li a:hover::before{width: 100%;}
 .sec-about .link-list .link-icon{display: flex; align-items: center;}
 .sec-about .link-list .link-icon li{margin-right: -14px; width: 72px; height: 72px;}
@@ -56,7 +60,7 @@ $ico-url: "../img/icon";
 .sec-about .link-list .link-icon li a:hover::before{transform: translate(0, -10%);}
 .sec-about .link-list .link-icon li:last-child{margin-right: 0;}
 
-.sec-project{}
+.sec-project{padding: 100px 0;}
 .sec-project .thumb-list{display: grid; grid-template-columns: repeat(2, calc(50% - 20px)); gap: 80px 40px;}
 .sec-project .thumb-list .item:hover{transform: translate(0, -5%);}
 .sec-project .thumb-list .item .img-wrap{position: relative; overflow: hidden; margin-bottom: 20px; border-radius: 30px;}
@@ -68,7 +72,7 @@ $ico-url: "../img/icon";
 .sec-project .thumb-list .item .txt-wrap .desc{font-size: 16px; color: #808080;}
 
 
-.sec-contact{}
+.sec-contact{padding-bottom: 100px;}
 .sec-contact .box-wrap{padding: 80px; border-radius: 46px; background: linear-gradient(285deg,rgba(233, 243, 250, 1) 0%, rgba(243, 241, 253, 1) 100%);}
 .sec-contact .txt-wrap{margin-top: 80px;}
 .sec-contact .txt-wrap .desc{margin-bottom: 20px; font-size: 22px;}
